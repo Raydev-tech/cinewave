@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Outfit:wght@100..900&display=swap');
+
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #09090b;
+  color: #ffffff;
+  font-family: "Manrope", Outfit, sans-serif;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container-width {
+  width: min(1240px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.movie-scroll {
+  scrollbar-width: none;
+}
+
+.movie-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.hero-overlay {
+  background: linear-gradient(
+    90deg,
+    #09090b 0%,
+    rgba(9, 9, 11, 0.94) 32%,
+    rgba(9, 9, 11, 0.55) 65%,
+    rgba(9, 9, 11, 0.12) 100%
+  );
+}
+
+@media (max-width: 768px) {
+  .container-width {
+    width: calc(100% - 32px);
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      0deg,
+      #09090b 0%,
+      rgba(9, 9, 11, 0.88) 50%,
+      rgba(9, 9, 11, 0.25) 100%
+    );
+  }
+}
